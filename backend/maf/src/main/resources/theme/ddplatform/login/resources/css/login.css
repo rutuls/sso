@@ -1,0 +1,266 @@
+html,
+body {
+    height: 100vh;
+    min-width: 1250px;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", "Helvetica Neue", sans-serif;
+}
+
+.login-container {
+    position: relative;
+}
+
+.header-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 21em;
+    background: #F4F7FC 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background: #F4F7FC 0% 0% no-repeat padding-box;
+    height: 72px;
+    padding: 0 20px;
+}
+
+.box-container {
+    position: absolute;
+    top: 10em;
+    left: 6%;
+}
+
+.box-container h1 {
+    margin: 0 0 0 20px;
+    font-weight: 400;
+    font-size: 21px;
+}
+
+
+.box-container p {
+    margin: 0 0px 15px 20px;
+    font-size: 13px;
+}
+
+.box {
+    /* width: 38em; */
+    padding: 40px 60px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #DEE2EC;
+    border-radius: 31px;
+}
+
+.login-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+}
+
+.login-img {
+    background: transparent url('../img/storage-man.png') 0% 0% no-repeat padding-box;
+    background-size: cover;
+    width: 420px;
+    height: 350px;
+    position: absolute;
+    top: 93px;
+    right: 0;
+}
+
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 22px;
+    color: #5F6368;
+    font: normal normal normal 11px/18px Poppins;
+    letter-spacing: 1.2px;
+}
+
+a {
+    text-decoration: none;
+    color: #5F6368;
+}
+
+a:hover,
+a:focus {
+    outline: none;
+    color: #007fbe;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.textbox {
+    width: 20em;
+    padding: 15px;
+    border: none;
+    background: #F5F6FA 0% 0% no-repeat padding-box;
+    border-radius: 15px;
+    font-family: "Poppins", "Helvetica Neue", sans-serif;
+}
+
+.textbox:focus {
+    outline: none;
+    border: solid 1px #007fbe;
+}
+
+.button {
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 0 30px;
+    line-height: 30px;
+    background: #007fbe 0% 0% no-repeat padding-box;
+    font-family: "Poppins", "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    min-width: 64px;
+    overflow: visible;
+}
+
+.button:focus {
+    background: #0571a7 0% 0% no-repeat padding-box;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}
+
+.button span {
+    letter-spacing: 0.64px;
+    color: #FFFFFF;
+}
+
+
+/* The container */
+.container {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    outline: 0;
+    left: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #D4D4D5;
+    border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    border: 1px solid #007fbe;
+    border-radius: 5px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: #007fbe;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 5px;
+    top: 0;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 1.5px 1.5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.form-options-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-options {
+    display: flex;
+    font: normal normal normal 12px/24px Poppins;
+    letter-spacing: 0px;
+    color: #000000CC;
+}
+
+.divider {
+    background-color: rgba(0, 0, 0, 0.12);
+    width: 1px;
+    height: 22px;
+    margin: 0 10px;
+}
+
+.form-field {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-error {
+    font-size: 11px;
+    margin-left: 5px;
+    color: #e24c4b;
+}

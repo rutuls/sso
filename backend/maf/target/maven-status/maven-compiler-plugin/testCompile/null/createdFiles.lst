@@ -1,0 +1,5 @@
+com\datdyn\platform\maf\apis\DashboardServiceTest.class
+com\datdyn\platform\maf\apis\TestUtility.class
+com\datdyn\platform\maf\apis\DashboardResourceTest.class
+com\datdyn\platform\maf\apis\SXServiceTest.class
+META-INF\panache-archive.marker

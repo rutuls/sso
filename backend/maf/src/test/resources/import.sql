@@ -1,0 +1,1 @@
+--INSERT INTO public.maf_users(id, email, firstname, lastname, password, username) VALUES (nextval('maf_users_id_seq'),'email@email.com', 'Deepak', 'Daneva', 'password', 'deepakdaneva');

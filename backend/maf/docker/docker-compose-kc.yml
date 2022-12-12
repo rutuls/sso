@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  kc-platform:
+    image: jboss/keycloak
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      DB_VENDOR: postgres
+      DB_ADDR: kc-platform-db
+      DB_DATABASE: keycloak
+      DB_USER: keycloak
+      DB_PASSWORD: keycloak
+      KEYCLOAK_IMPORT: /opt/jboss/keycloak/imports/realm-export.json
+    depends_on:
+      - kc-platform-db
+    volumes:
+      - ../src/main/resources/theme/ddplatform:/opt/jboss/keycloak/themes/ddplatform
+      - ../src/main/resources/standalone.xml:/opt/jboss/keycloak/standalone/configuration/standalone.xml
+      - ../src/main/resources/standalone-ha.xml:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
+      - ../src/main/resources/imports:/opt/jboss/keycloak/imports
+    ports:
+      - 8184:8080
+      - 8544:8443
+
+  kc-platform-db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_PASSWORD: keycloak
+      POSTGRES_USER: keycloak
+      POSTGRES_DB: keycloak
+    volumes:
+      - ./kp_db_data:/var/lib/postgresql/data
